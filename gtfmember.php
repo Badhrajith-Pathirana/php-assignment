@@ -37,6 +37,7 @@
 			<h3 class="report">Report garbage spot</h3>
 		</div>
 		<form action="" method="">
+		<div class="col-sm-12">
 		<div class="col-sm-4">
 				<div class="form-group">
 					<label for="city">City</label>
@@ -47,6 +48,8 @@
 					<input type="text" class="form-control" id="city"/>
 				</div>
 		</div>	
+		</div>
+		<div class="col-sm-12">
 		<div class="col-sm-4">			
 				<div class="form-group">
 					<label for="des">Description</label>
@@ -57,6 +60,8 @@
 					<input type="text" class="form-control" id="des"/>
 				</div>
 		</div>
+		</div>
+		<div class="col-sm-12">
 		<div class="col-sm-4">				
 				<div class="form-group">
 					<label for="image">Add image</label>
@@ -67,7 +72,7 @@
 					<input type="file" accept="image/*" class="form-control" id="image"/>
 				</div>
 		</div>	
-
+		</div>
 
 		<div class="col-sm-12" title="map">
 			<div id="map"></div>

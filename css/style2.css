@@ -27,6 +27,7 @@ li a{
 	width:90%;
 	line-height:25px;
 	border-radius:5px;
+	height:400px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	overflow: hidden;

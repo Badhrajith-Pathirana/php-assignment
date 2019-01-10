@@ -22,7 +22,7 @@
         $password = md5($password);
 
        if($password == $fetchR['password']){
-            header('Location: NoWay.php');
+            header('Location: gtfmember.php');
        } 
        else {
            die ('Incorrect password');

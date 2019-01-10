@@ -10,7 +10,12 @@
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<style>
+	#map{
+		height:630px;
+		width:100%;
+	}
+</style>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -146,6 +151,29 @@
 			</content>
 			</article>
 	    </div>
-	</div>	
+	</div>
+	<h3> Garbage collecting spots</h3>
+	<div class="col-sm-12">
+	<div id="map"><h3> Garbage collecting spots</h3>
+	</div>
+		<script>
+		function initMap(){
+			// var options = {
+				// zoom:11,
+			// 	center:{lat:7.8731,lng:80.7718}
+			// }
+			// var map = new google.maps.Map(document.getElementById('map'),options);
+			var myLatLng = {lat: 6.9271, lng: 79.8612};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: myLatLng
+  });
+		}	
+		</script>
+
+	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu_OkPMjRPFRdukUbVE9x0ajJTXah9Ow8&callback=initMap"
+    ></script>		
 </body>
 </html>

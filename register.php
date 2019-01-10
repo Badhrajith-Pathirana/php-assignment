@@ -15,7 +15,7 @@
             mysqli_query($db,$sql);
             $_SESSION['message'] = "You are now logged in";
             $_SESSION['username'] = $username;
-            // header("location:gtfMember.html");
+            header("location:gtfmember.php");
        }
        else{
         $_SESSION['message'] = "The two passwords do not match";
