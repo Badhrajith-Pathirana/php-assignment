@@ -185,6 +185,19 @@
     zoom: 13,
     center: myLatLng
   });
+  var i=0;
+  var marker=[];
+  var mapArray= [{lat:6.8195,lng: 79.8801},{lat:6.8301,lng:79.8801},{lat:6.8522,lng:79.9249},{lat:6.8609,lng:79.8997}];
+  mapArray.forEach(function (arr){
+	var myLat={ lat : parseFloat(arr['lat']) , lng : parseFloat(arr['lng']) };
+		 marker[i] = new google.maps.Marker({
+    	position: myLat,
+    	map: map,
+    	title: arr['description'],
+		id: arr['locID']
+  });
+  i++;
+  })
 		}	
 		</script>
 
