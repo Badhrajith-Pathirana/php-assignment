@@ -39,8 +39,62 @@
 	</div>	
 		<div class="col-sm-12" title="map">
 			<div id="map"></div>
-	<script>
-		function initMap(){
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu_OkPMjRPFRdukUbVE9x0ajJTXah9Ow8&callback=initMap"
+    ></script>			
+		</div>
+		
+		<div class="well">
+			<div class="col-sm-12">
+			<h3 class="artHead">Add article</h3>
+		</div>
+			<div class="col-sm-12">
+				<form action="" method="">
+		<div class="col-sm-2">
+				<div class="form-group">
+					<label for="heading">Article heading</label>
+				</div>
+		</div>
+		<div class="col-sm-10">
+				<div class="form-group">
+					<input type="text" class="form-control" id="heading"/>
+				</div>
+		</div>	
+		<div class="col-sm-2">
+				<div class="form-group">
+					<label for="p1">Paragraph</label>
+				</div>
+		</div>
+		<div class="col-sm-10">
+				<div class="form-group">
+					<input type="text" class="form-control" id="p1"/>
+				</div>
+		</div>
+		<button type="button" id="btn-post">Post</button>
+		</div>
+		<script>
+		$('document').ready(function(){
+		  $('#btn-post').click(function (event) {
+			  var title = $('#heading').val();
+			  var paragraph = $('#p1').val();
+			$.ajax({
+				method:"post",
+				url:"article.php",
+				data:{
+					title:title,
+					paragraph:paragraph
+				},
+				async:true
+			}).done(function(response){
+				console.log(response);
+				if(response) {
+					alert("Your article has been posted");
+				} else {
+					alert("Sorry something went wrong");
+				}
+			});
+		  });
+	  });
+			function initMap(){
 			var options = {
 				zoom:13,
 				center:{lat: 6.9271, lng: 79.8612}
@@ -103,61 +157,6 @@ var marker=[];
 	})
 })
 		}
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu_OkPMjRPFRdukUbVE9x0ajJTXah9Ow8&callback=initMap"
-    ></script>			
-		</div>
-		
-		<div class="well">
-			<div class="col-sm-12">
-			<h3 class=artHead>Add article</h3>
-		</div>
-			<div class="col-sm-12">
-				<form action="" method="">
-		<div class="col-sm-2">
-				<div class="form-group">
-					<label for="heading">Article heading</label>
-				</div>
-		</div>
-		<div class="col-sm-10">
-				<div class="form-group">
-					<input type="text" class="form-control" id="heading"/>
-				</div>
-		</div>	
-		<div class="col-sm-2">
-				<div class="form-group">
-					<label for="p1">Paragraph one</label>
-				</div>
-		</div>
-		<div class="col-sm-10">
-				<div class="form-group">
-					<input type="text" class="form-control" id="p1"/>
-				</div>
-		</div>
-		<div class="col-sm-2">
-				<div class="form-group">
-					<label for="p2">Paragraph two</label>
-				</div>
-		</div>
-		<div class="col-sm-10">
-				<div class="form-group">
-					<input type="text" class="form-control" id="p2"/>
-				</div>
-		</div>
-		<div class="col-sm-2">
-				<div class="form-group">
-					<label for="p3">Paragraph one</label>
-				</div>
-		</div>
-		<div class="col-sm-10">
-				<div class="form-group">
-					<input type="text" class="form-control" id="p3"/>
-				</div>
-		</div>	
-			</div>
-
-
-		</div>
-
+		</script>
 </body>
 </html>

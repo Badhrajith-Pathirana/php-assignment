@@ -14,21 +14,10 @@ switch ($method){
         }
         break;
     case "POST":
-        $city = $_POST["city"];
-        $description = $_POST["desc"];
-        // $imageName = $_FILES['image']['name'];
-        // $imagePath = "upload/".$imageName;
-        $arr['city'] = $city;
-        $arr['desc'] = $description;
-        // $arr['imageName'] = $imageName;
-        $arr['lat'] = $_POST['lat'];
-        $arr['lng'] = $_POST['lng'];
-        echo json_encode(saveData($arr));
-        // if(move_uploaded_file($_FILE['image']['tmp_name'],$imagePath)){
-        //     echo json_encode(saveData($arr));
-        // } else{
-        //     echo "Image uploading failed";
-        // }
+        $article = [];
+        $article["title"] = $_POST["title"];
+        $article["paragraph"] = $_POST["paragraph"];
+        echo json_encode(addArticle($article));
         break;
 }
 
@@ -45,5 +34,19 @@ function getData() {
         $i++;
      }
      return $markers;
+}
+
+function addArticle($data) {
+    $query = "insert into article (title, paragraph) values (?,?)";
+    $db = mysqli_connect("localhost","root","","gtf");
+    $stmt = $db->prepare($query);
+    $stmt->bind_param("ss",$title, $paragraph);
+    $title = $data["title"];
+    $paragraph = $data["paragraph"];
+    $stmt->execute();
+    if($db->error) {
+        return "Err".$db->error;
+    }
+    return true;
 }
 ?>
