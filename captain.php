@@ -110,7 +110,7 @@ $.ajax({
 	  });
   });
 	google.maps.event.addListener(marker,'click',function(event){
-			var id = event
+	
 	});
 		}
 	</script>
