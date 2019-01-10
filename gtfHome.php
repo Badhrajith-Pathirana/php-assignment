@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Garbage Collection System</title>
-	<link rel="stylesheet" href="style2.css" type="text/css">
+	<link rel="stylesheet" href="css/style2.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -19,7 +19,7 @@
 	<nav class="navbar navbar-style">
 		<div class="container">
 			<div class="navbar-header">
-				<img class="logo" src="logo1.png">Green Task Force</a>
+				<img class="logo" src="img/2.png">Green Task Force</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="index.php">Login</a></li>
@@ -41,7 +41,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="coast.jpg" alt="Los Angeles">
+      <img src="img/coast.jpg" alt="Los Angeles">
       <div class="carousel-caption">
       	<h2>Header</h2>
       	<h3>Lorem ipsum lorem ipsum lorem ipsum</h3>			
@@ -49,24 +49,23 @@
     </div>
 
     <div class="item">
-      <img src="grnPath.jpg" alt="Chicago">
+      <img src="img/grnPath.jpg" alt="Chicago">
 		<div class="carousel-caption">
       	<h2>Header</h2>
       	<h3>Lorem ipsum lorem ipsum lorem ipsum</h3>			
 	  </div>    
     </div>
     <div class="item">
-      <img src="garbage.jpg" alt="Los Angeles">
+      <img src="img/garbage.jpg" alt="Los Angeles">
     	<div class="carousel-caption">
       	<h2>Header</h2>
       	<h3>Lorem ipsum lorem ipsum lorem ipsum</h3>			
 	  </div>
     </div>
     <div class="item">
-      <img src="signup2.jpg" alt="New York">
+      <img src="img/signup2.jpg" alt="New York">
       <div class="carousel-caption">
-      	<h2>Header</h2>
-      	<h3>Lorem ipsum lorem ipsum lorem ipsum</h3>			
+	  <button type="button" class="btn btn-success" onclick="window.location.href='register.php'">Sign up</button>			
 	  </div>
     </div>
   </div>

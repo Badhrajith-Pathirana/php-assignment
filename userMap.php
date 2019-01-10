@@ -1,5 +1,5 @@
 <?php
-include_once 'gtfMember.html';
+include_once 'gtfMember.php';
 include_once 'locations_model.php';
 //get_unconfirmed_locations
 ?>

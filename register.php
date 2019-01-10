@@ -31,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Garbage Managemnet System</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reg.css">
 </head>
 <body>
     <div class="login">
@@ -46,9 +46,8 @@
                 <input type="password" name="password" placeholder="Password">
                 <p>Enter password again</p>
                 <input type="password" name="password2" placeholder="Password">
-                <input type="submit" name="login_btn" value="Login">
-                <a href="#">Lost your password?</a><br>
-                <a href="#">Don't have an account?</a>
+                <input type="submit" name="login_btn" value="Sign Up">
+                
             </form>
 
     </div><!-- login -->
