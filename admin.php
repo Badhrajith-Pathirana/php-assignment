@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Garbage Collection System</title>
-	<link rel="stylesheet" href="style2.css" type="text/css">
+	<link rel="stylesheet" href="css/admin.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-style">
 		<div class="container">
 			<div class="navbar-header">
-				<img class="logo" src="logo1.png">Green Task Force</a>
+				<img class="logo" src="img/2.png">Green Task Force</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><i class="far fa-bell"></i></a></li>
@@ -71,6 +71,31 @@
 		</div>
 		<button type="button" id="btn-post">Post</button>
 		</div>
+
+		<div class="col-sm-12">
+        
+        <form>
+        <fieldset >
+            <legend><h1>Add Member</h1></legend>
+            
+            <p>
+                <label for="">Full Name</label>
+                <input type="text" name="fullname" placeholder="Full Name">
+            </p>
+            <p>
+                <label for="" name="password" placeholder="Password"></label>
+            </p>
+            <p>
+                <label for="">Address</label>
+                <input type="text" name="address" id="" placeholder="Address">
+            </p>
+            <p>
+                <button type="submit" name="submit">Add Member</button>
+            </p>
+        </fieldset>
+        </form>
+    	</div><!-- memberReg -->
+
 		<script>
 		$('document').ready(function(){
 		  $('#btn-post').click(function (event) {
