@@ -100,20 +100,29 @@ $.ajax({
 		  return;
 	  }
 	  response.forEach(function(resp){
+		  var infoWindowText = '<div id="content">'+
+		  '<div id="title">'+resp["title"]+'</div>'+
+		  '<div id="content">'+resp["description"]+'</div>'+
+		  '<div id="buttonForm"><button type="button" id="agreeBtn">Confirm</button> <button type="button" id="defuseBtn">Defuse</button></div>'+
+		  '</div>';
 		  var myLat={ lat : parseFloat(resp['lat']) , lng : parseFloat(resp['lng']) };
 		 marker[i] = new google.maps.Marker({
     	position: myLat,
     	map: map,
     	title: resp['description']
   });
+  var infoWindow = new google.maps.InfoWindow({
+	  content: infoWindowText
+  });
+  marker[i].addListener('click', function(event) {
+	infoWindow.open(map,marker[i]	);
+  });
   i++;
 	  });
   });
-	google.maps.event.addListener(marker,'click',function(event){
 	
-	});
 		}
-	</script>
+	</script>	
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu_OkPMjRPFRdukUbVE9x0ajJTXah9Ow8&callback=initMap"
     ></script>			
 		</div>

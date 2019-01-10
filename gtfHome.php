@@ -89,14 +89,11 @@
 
 	</div>
 	<div class="col-sm-4">
-			<div class="Content">
-			<article class="topcontent">
+			<div class="Content" id="contentArticle">
+			<!-- <article class="topcontent">
 				<header>
 					<h2><a href="#" title="First article">Article #1</a></h2>
 				</header>
-				<footer>
-					<p class="post-info">This post is written by @author admin</p>
-				</footer>
 				<content>
 					<p>Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem</p> 
 					<p>ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsumLorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsumLorem Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum</p>
@@ -149,7 +146,7 @@
 				<p>Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem</p> 
 					<p>ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsumLorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsumLorem Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem iosum lorem ipsum lorem ipsum lorem ipsum</p>
 			</content>
-			</article>
+			</article> -->
 	    </div>
 	</div>
 	<h3> Garbage collecting spots</h3>
@@ -157,6 +154,25 @@
 	<div id="map"><h3> Garbage collecting spots</h3>
 	</div>
 		<script>
+		$('document').ready(function () {
+			$.ajax({
+				method:"get",
+				url: "article.php?action=articles",
+				async: false
+			}).done(function (response){
+				response.forEach(function(resp){
+					var article = '<article class="topcontent">'+
+				'<header>'+
+					'<h2>'+resp['title']+'</h2>'+
+				'</header>'+
+				'<content>'+
+					'<p>'+resp['paragraph']+'</p>'+ 
+				'</content>'+				
+			'</article>';
+				$('#contentArticle').append(article);
+				});
+			});
+		});
 		function initMap(){
 			// var options = {
 				// zoom:11,
@@ -169,6 +185,19 @@
     zoom: 13,
     center: myLatLng
   });
+  var i=0;
+  var marker=[];
+  var mapArray= [{lat:6.8195,lng: 79.8801},{lat:6.8301,lng:79.8801},{lat:6.8522,lng:79.9249},{lat:6.8609,lng:79.8997}];
+  mapArray.forEach(function (arr){
+	var myLat={ lat : parseFloat(arr['lat']) , lng : parseFloat(arr['lng']) };
+		 marker[i] = new google.maps.Marker({
+    	position: myLat,
+    	map: map,
+    	title: arr['description'],
+		id: arr['locID']
+  });
+  i++;
+  })
 		}	
 		</script>
 
