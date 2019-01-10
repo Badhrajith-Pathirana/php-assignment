@@ -25,7 +25,7 @@ function getData() {
     $i = 0;
     $articles = [];
     $db = mysqli_connect("localhost","root","","gtf");
-    $query = "select * from articles";
+    $query = "select * from article";
     $data= mysqli_query($db,$query);
      while($fetch=mysqli_fetch_assoc($data)) {
         $articles[$i]["articleId"] = $fetch["articleId"];
@@ -33,7 +33,7 @@ function getData() {
         $articles[$i]["paragraph"] = $fetch["paragraph"];
         $i++;
      }
-     return $markers;
+     return $articles;
 }
 
 function addArticle($data) {
