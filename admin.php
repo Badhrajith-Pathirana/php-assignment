@@ -76,18 +76,18 @@
         
         <form>
         <fieldset >
-            <legend><h1>Add Member</h1></legend>
+            <legend><h3>Add Member</h3></legend>
             
             <p>
-                <label for="">Full Name</label>
-                <input type="text" name="fullname" placeholder="Full Name">
+                <label for="">Username</label>
+                <input type="text" name="fullname" placeholder="Username">
             </p>
             <p>
                 <label for="" name="password" placeholder="Password"></label>
             </p>
             <p>
-                <label for="">Address</label>
-                <input type="text" name="address" id="" placeholder="Address">
+                <label for="">Password</label>
+                <input type="text" name="address" id="" placeholder="Password">
             </p>
             <p>
                 <button type="submit" name="submit">Add Member</button>

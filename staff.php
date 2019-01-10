@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Garbage Collection System</title>
-	<link rel="stylesheet" href="style2.css" type="text/css">
+	<link rel="stylesheet" href="css/style2.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-style">
 		<div class="container">
 			<div class="navbar-header">
-				<img class="logo" src="logo.jpg">Green Task Force</a>
+				<img class="logo" src="img/2.png">Green Task Force</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><i class="far fa-bell"></i></a></li>
